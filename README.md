@@ -21,4 +21,12 @@ the weight of fuel (Lookup to `AoC01_Module__c`)
 * Trigger on `AoC01_Module_ChangeEvent` that adds recursive childern of the modules and calculates the solutions
     * When it creates no further `AoC01_Module__c`, it marks this problem as completed.
 * ProcessBuilder on `AoC01_Module__c` to calculate the `Weight__c` of a module with the Lookup to `AoC01_Module__c` filled.
-    * This cannot be done in the ChangeEventTrigger because the result of the formula `Fuel_Needed__c` is not present in this Trigger. 
+    * This cannot be done in the ChangeEventTrigger because the result of the formula `Fuel_Needed__c` is not present in this Trigger.
+    
+## Day 02
+Running simple Intcode
+* CustomObject `Intcode_Processor__c` to save state of a running intcode process
+* `Intcode` ApexClass to do the calculations (also runnable without an `Intcode_Processor__c` record)
+* Part 1 in solved syncronously by inserting an `Intcode_Processor__c` and checking the result
+* Part 2 is to expensive to run synchron as 10000 Intcode runs have to be checked
+  * We use PlatformEvents `AoC02_Part2_Try__c` to bulkify the runs in 100 runs per event und resume when a limit is hit. 
