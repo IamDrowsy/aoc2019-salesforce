@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fuel_for_Module__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Fuel for Module</label>
+    <referenceTo>AoC01_Module__c</referenceTo>
+    <relationshipLabel>AoC01 Modules</relationshipLabel>
+    <relationshipName>Fuel_for_Module</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
