@@ -25,8 +25,26 @@ the weight of fuel (Lookup to `AoC01_Module__c`)
     
 ## Day 02
 Running simple Intcode
+* Limits: 
+  * Apex CPU Limit => Distribute with Platform Events
 * CustomObject `Intcode_Processor__c` to save state of a running intcode process
 * `Intcode` ApexClass to do the calculations (also runnable without an `Intcode_Processor__c` record)
 * Part 1 in solved syncronously by inserting an `Intcode_Processor__c` and checking the result
 * Part 2 is to expensive to run synchron as 10000 Intcode runs have to be checked
-  * We use PlatformEvents `AoC02_Part2_Try__c` to bulkify the runs in 100 runs per event und resume when a limit is hit. 
+  * We use PlatformEvents `AoC02_Part2_Try__c` to bulkify the runs in 100 runs per event und resume when a limit is hit.
+  
+## Day 03
+Calculating intersections of wires 
+* Limits
+  * Memory Limit => go with BigObjects
+  * BigObjects are really fragile
+     * can only query in order of the index
+     * cannot mix dml and bigobject dml
+     * Platform Events only fire after bigobject dml (but no error!) 
+* BigObject `AoC03_Wire_Part__b` to store x,y,Index for Wire 1
+  * needs field with x_y combined in index to query for matches
+* Chained Platform events `AoC03__c` to create `AoC03_Wire_Part__b`
+  * Must be chained as there is no way of storing the information of the last part (mixing big object and normal dml)
+* After inserting wire1, check if wire2 matches a part of wire1
+* Cannot be UnitTested because of BigObjects
+* Solving the full run takes about 20 mins

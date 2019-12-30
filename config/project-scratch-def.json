@@ -1,5 +1,5 @@
 {
   "orgName": "Advent of Code",
   "edition": "Developer",
-  "features": []
+  "features": ["PlatformCache"]
 }

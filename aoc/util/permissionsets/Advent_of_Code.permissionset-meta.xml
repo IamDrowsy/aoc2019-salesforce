@@ -6,6 +6,11 @@
     </applicationVisibilities>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Advent_of_Code_Problem__c.Completed_Time__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Advent_of_Code_Problem__c.Completed__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -22,6 +27,16 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Advent_of_Code_Problem__c.Part_2_Solution__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Advent_of_Code_Problem__c.Started__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Advent_of_Code_Problem__c.Status__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -52,16 +67,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>AoC01_Module__c.Weight__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>AoC03_Cell__b.Position_1__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>AoC03_Cell__b.Position_2__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -114,7 +119,16 @@
         <allowEdit>false</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>false</modifyAllRecords>
-        <object>AoC03_Cell__b</object>
+        <object>AoC03_Wire_Part__b</object>
+        <viewAllRecords>false</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>false</allowDelete>
+        <allowEdit>false</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>false</modifyAllRecords>
+        <object>AoC03__e</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
