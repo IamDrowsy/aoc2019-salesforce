@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_for_part2__c</fullName>
+    <externalId>false</externalId>
+    <formula>LEN(Name) - LEN(SUBSTITUTE(Name,&#39;0&#39;,&#39;&#39;)) == 2 ||
+LEN(Name) - LEN(SUBSTITUTE(Name,&#39;1&#39;,&#39;&#39;)) == 2 ||
+LEN(Name) - LEN(SUBSTITUTE(Name,&#39;2&#39;,&#39;&#39;)) == 2 ||
+LEN(Name) - LEN(SUBSTITUTE(Name,&#39;3&#39;,&#39;&#39;)) == 2 ||
+LEN(Name) - LEN(SUBSTITUTE(Name,&#39;4&#39;,&#39;&#39;)) == 2 ||
+LEN(Name) - LEN(SUBSTITUTE(Name,&#39;5&#39;,&#39;&#39;)) == 2 ||
+LEN(Name) - LEN(SUBSTITUTE(Name,&#39;6&#39;,&#39;&#39;)) == 2 ||
+LEN(Name) - LEN(SUBSTITUTE(Name,&#39;7&#39;,&#39;&#39;)) == 2 ||
+LEN(Name) - LEN(SUBSTITUTE(Name,&#39;8&#39;,&#39;&#39;)) == 2 ||
+LEN(Name) - LEN(SUBSTITUTE(Name,&#39;9&#39;,&#39;&#39;)) == 2</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Valid_for_part2</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

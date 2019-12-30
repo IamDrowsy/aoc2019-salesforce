@@ -48,3 +48,11 @@ Calculating intersections of wires
 * After inserting wire1, check if wire2 matches a part of wire1
 * Cannot be UnitTested because of BigObjects
 * Solving the full run takes about 20 mins
+
+## Day 04
+Find numbers with 6 digits in a range that fulfill some conditions
+* CustomObject `AoC04_Candidate__c` that stores a Number and validates the conditions
+   * as part2 is stricter than part1 we validate that it is valid for part1 and have an additional checkbox `Valid_for_part2__c`
+* Implement a batch that tries to insert all numbers in given range (~460k)
+* count the records that got inserted (and those with the flag `Valid_for_part2__c`)
+* Solving the full run takes about 5 min and runs 230 batches  

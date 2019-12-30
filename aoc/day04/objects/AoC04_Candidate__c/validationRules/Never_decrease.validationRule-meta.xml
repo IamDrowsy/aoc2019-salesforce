@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Never_decrease</fullName>
+    <active>true</active>
+    <errorConditionFormula>C1__c &gt; C2__c || C2__c &gt; C3__c || C3__c &gt; C4__c || C4__c &gt; C5__c || C5__c &gt; C6__c</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Number should never decrease</errorMessage>
+</ValidationRule>

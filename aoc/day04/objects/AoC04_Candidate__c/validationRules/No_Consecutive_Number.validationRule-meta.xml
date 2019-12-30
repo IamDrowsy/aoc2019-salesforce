@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Consecutive_Number</fullName>
+    <active>true</active>
+    <errorConditionFormula>C1__c != C2__c &amp;&amp; C2__c != C3__c &amp;&amp; C3__c != C4__c &amp;&amp; C4__c != C5__c &amp;&amp; C5__c != C6__c</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Needs to contain consecutive numbers</errorMessage>
+</ValidationRule>
